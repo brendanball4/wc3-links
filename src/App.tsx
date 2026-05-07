@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/warcraftcn/button'
 import { triggerScrollToast } from '@/components/ui/warcraftcn/toast'
 import './App.css'
 
-const BLANK_LINKS = ['', '', '', '']
+const BLANK_LINKS = ['', '', '']
 
 function handleDiscord() {
   navigator.clipboard.writeText('itsnynx').then(() => {
@@ -41,6 +41,12 @@ export default function App() {
 
               <Button className="w-full uppercase tracking-widest" onClick={handleDiscord}>
                 Discord
+              </Button>
+
+              <Button asChild className="w-full uppercase tracking-widest">
+                <a href="https://dev.bmball.com" target="_blank" rel="noreferrer">
+                  Portfolio
+                </a>
               </Button>
 
               {BLANK_LINKS.map((_, i) => (
